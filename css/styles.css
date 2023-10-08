@@ -4,6 +4,7 @@
 /* ---------------- Font Sizing ---------------- */
 html {
   font-size: 100%;
+  background-color: darkslategrey;
 }
 
 /* ---------------- Media Queries ---------------- */
