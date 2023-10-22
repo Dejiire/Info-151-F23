@@ -4,7 +4,6 @@
 /* ---------------- Font Sizing ---------------- */
 html {
   font-size: 100%;
-  background-color: darkslategrey;
 }
 
 /* ---------------- Media Queries ---------------- */
@@ -14,6 +13,7 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --light-blue: #42B4EE;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -332,12 +332,27 @@ template {
 /* =============
     Base
 ============= */
+body {
+  background-color: var(--black);
+}
+
 /* =============
     Typography
 ============= */
 /* =============
     Buttons
 ============= */
+button {
+  border: none;
+}
+
+.blue-btn {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 6px;
+}
+
 /* =============
     Forms
 ============= */
@@ -367,3 +382,10 @@ textarea {
 /* =============
     Footer
 ============= */
+footer section {
+  color: var(--white);
+  padding: 0px;
+}
+footer section ul li a {
+  color: var(--white);
+}
