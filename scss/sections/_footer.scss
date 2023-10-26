@@ -1,14 +1,44 @@
 footer{
-    section{
+    display: flex;
+    justify-content: space-around;
+
+    #first{
+        height: 200px;
+        width: 350px;
+        margin-left: 15px;
+        color: var(--white);
+        
+        p{
+            width: 300px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            margin-left: -35px;
+            margin-right: 20px;
+            li{
+                list-style: none;
+            }
+        }
+    }
+
+    #other{
+        display: flex;
         color: var(--white);
         padding: 0px;
+        margin-right: 100px;
+        
         ul{
+           margin-top: z0px; 
+           margin-right: 50px;
             li{
+                margin-top: 15px;
+                list-style: none;
                 a{
+                    text-decoration: none;
                     color: var(--white);
                 }
             }
         }
     }
-    
 }

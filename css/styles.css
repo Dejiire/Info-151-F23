@@ -333,7 +333,13 @@ template {
     Base
 ============= */
 body {
+  color: var(--white);
   background-color: var(--black);
+}
+body #copyright {
+  margin-top: 60px;
+  margin-left: 550px;
+  margin-right: 550px;
 }
 
 /* =============
@@ -382,10 +388,51 @@ textarea {
 /* =============
     Footer
 ============= */
-footer section {
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+footer #first {
+  height: 200px;
+  width: 350px;
+  margin-left: 15px;
+  color: var(--white);
+}
+footer #first p {
+  width: 300px;
+}
+footer #first ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: -35px;
+  margin-right: 20px;
+}
+footer #first ul li {
+  list-style: none;
+}
+footer #other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: var(--white);
   padding: 0px;
+  margin-right: 100px;
 }
-footer section ul li a {
+footer #other ul {
+  margin-top: z0px;
+  margin-right: 50px;
+}
+footer #other ul li {
+  margin-top: 15px;
+  list-style: none;
+}
+footer #other ul li a {
+  text-decoration: none;
   color: var(--white);
 }
