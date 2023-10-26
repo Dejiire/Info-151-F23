@@ -4,11 +4,19 @@
 
 body{
     padding-top: 50px;
-    background-color: var(--white);
+    background-color: var(--off-white);
 
     #top-heading{
-        h1,h2{
-            padding-left: 100px;
+        h1{
+            padding-left: 445px;
+            padding-right: 445px;
+            font-size: rem-calc(46);
+        }
+        h2{
+          margin-top: 30px;
+          padding-left: 550px;
+          padding-right: 550px;
+          font-size: rem-calc(25);
         }
     }
 

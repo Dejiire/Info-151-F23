@@ -1,13 +1,58 @@
 #plans{
     margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
+
     section{
+        ul{
+            li{
+                list-style: none;
+                margin-top: 20px;
+                margin-left: 40px;
+            }
+        }
+    
         #purple-heading{
             background-color: var(--purple);
+            margin-left: -22px;
             color: var(--white);
+            width: 244px;
+            height: 100px;
+            margin-top: -22px;
+
+            h2{
+                margin-left: 85px;
+                font-size: rem-calc(25);
+                font-weight: 100px;
+            }
+
+            h1{
+                margin-left: 60px;
+                font-size: rem-calc(40);
+                font-weight: 100px;
+                
+            }
         }
-        border-color: var(--purple);
+        background-color: var(--white);
         color: var(--black);
         padding-bottom: 15px;
         padding: 22px;
+        height: 300px;
+        width: 200px;
+
+        h2{
+            margin-left: 55px;
+            font-size: rem-calc(25);
+            font-weight: 100px;
+        }
+
+        h1{
+            margin-left: 40px;
+            font-size: rem-calc(40);
+            font-weight: 100px;
+            
+        }
     }
 }
