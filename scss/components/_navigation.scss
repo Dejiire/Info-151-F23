@@ -1,3 +1,30 @@
 /* =============
     Navigation
 ============= */
+a{
+    text-decoration: none;
+    
+}
+nav{
+    ul{
+        display: flex;
+        justify-content: space-around;
+
+        .selected{
+            color: var(--light-blue);
+        }
+        
+        li{
+            list-style: none;
+            a:link, a:visited{
+                color: var(--white);
+                font-size: rem-calc(14);
+                font-weight: 600;
+            }
+            margin-bottom: 15px;
+        }
+
+
+    }
+}
+
