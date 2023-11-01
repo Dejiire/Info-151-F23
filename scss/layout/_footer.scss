@@ -1,3 +1,88 @@
 /* =============
     Footer
 ============= */
+footer{
+    margin-top: 10%;
+
+
+        display: grid;
+        grid-template-columns: 10% auto 10%;
+        grid-template-areas: ". main-grid .";
+
+        #main-grid{
+            grid-area: main-grid;
+            display: grid;
+            grid-template-columns: 30% 20% 20% 30%;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-areas:
+            "first res use news";
+            
+            #first{
+                grid-area: first;
+                p{
+                    margin-right: 30%;
+                }
+
+                ul{
+                    display: flex;
+                    justify-content: space-around;
+                    margin-left: -35px;
+                    margin-right: 40%;
+                    li{
+                        list-style: none;
+                        color: var(--white);
+                    }
+                }
+            }
+
+            #resources{
+                grid-area: res;
+                ul{
+                    li{
+                        list-style: none;
+                        margin-bottom: 15px;
+                        margin-left: -17%;
+                        a{
+                            text-decoration: none;
+                            color: var(--white);
+                        }
+                        
+                    }
+                }
+            }
+
+            #useful{
+                grid-area: use;
+                ul{
+                    li{
+                        list-style: none;
+                        margin-bottom: 15px;
+                        margin-left: -17%;
+                        a{
+                            text-decoration: none;
+                            color: var(--white);
+                            text-align: left;
+                        }
+                        
+                    }
+                }
+            }
+            #news{
+                grid-area: news;
+                ul{
+                    li{
+                        list-style: none;
+                        margin-bottom: 15px;
+                        margin-left: -13%;
+                        a{
+                            text-decoration: none;
+                            color: var(--white);
+                        }
+                        
+                    }
+                }
+            }
+
+        }
+
+}
