@@ -336,6 +336,18 @@ template {
 body {
   background-color: var(--purple);
 }
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". main-grid-item .";
+}
+body main #main-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main-grid-item;
+}
 
 /* =============
     Typography
@@ -410,7 +422,7 @@ nav ul li {
   list-style: none;
   margin-bottom: 15px;
 }
-nav ul li a:link, nav ul li a:visited {
+nav ul li a {
   color: var(--white);
   font-size: 0.875rem;
   font-weight: 600;
@@ -419,6 +431,14 @@ nav ul li a:link, nav ul li a:visited {
 /* =============
     Header
 ============= */
+header {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% auto;
+  grid-template-columns: 35% auto;
+}
+
 /* =============
     Footer
 ============= */
@@ -427,20 +447,17 @@ nav ul li a:link, nav ul li a:visited {
 ============= */
 #hero {
   margin-top: 110px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% auto;
+  grid-template-columns: 35% auto;
 }
 #hero #hero-card {
   color: var(--white);
-  border-radius: 14px;
-  padding: 22px;
-  width: 355px;
-  height: 50px;
-  margin-left: 100px;
+  margin-top: 45px;
 }
 #hero #hero-card p {
-  margin-top: 15px;
+  margin-top: 40px;
   font-size: 1.125rem;
 }
 #hero #hero-card h1 {
