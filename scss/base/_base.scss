@@ -3,21 +3,27 @@
 ============= */
 
 body{
-    padding-top: 50px;
+    padding-top: 10%;
     background-color: var(--off-white);
 
-    #top-heading{
-        h1{
-            padding-left: 445px;
-            padding-right: 445px;
-            font-size: rem-calc(46);
-        }
-        h2{
-          margin-top: 30px;
-          padding-left: 550px;
-          padding-right: 550px;
-          font-size: rem-calc(25);
-        }
+    
+    display: grid;
+    grid-template-columns: auto 1140px auto;
+    grid-template-areas: ". main-grid .";
+
+    main{
+        text-align: center;
+        grid-area: main-grid;
+
+        #top-heading{
+            h1{
+                font-size: rem-calc(46);
+            }
+            h2{
+                font-size: rem-calc(25);
+                margin-top: 20px;
+            }
+       }
     }
 
     /* The switch - the box around the slider */
@@ -82,5 +88,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-}
 
+
+}

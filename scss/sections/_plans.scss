@@ -1,18 +1,34 @@
 #plans{
     margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    margin-left: 100px;
-    margin-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "startup classic premium";
+    margin-left: 10%;
+    margin-right: 10%;
+
+    #start{
+        grid-area: startup;
+    }
+
+    #classic{
+        grid-area: classic;
+    }
+
+    #premium{
+        grid-area: premium;
+    }
 
     section{
+        margin-bottom: 15%;
         ul{
             li{
+                text-align: left;
                 list-style: none;
                 margin-top: 20px;
                 margin-left: 40px;
             }
         }
+    
     
         #purple-heading{
             background-color: var(--purple);
@@ -23,13 +39,12 @@
             margin-top: -22px;
 
             h2{
-                margin-left: 85px;
+                padding-top: 5%;
                 font-size: rem-calc(25);
                 font-weight: 100px;
             }
 
             h1{
-                margin-left: 60px;
                 font-size: rem-calc(40);
                 font-weight: 100px;
                 
@@ -43,16 +58,13 @@
         width: 200px;
 
         h2{
-            margin-left: 55px;
             font-size: rem-calc(25);
             font-weight: 100px;
         }
 
         h1{
-            margin-left: 40px;
             font-size: rem-calc(40);
             font-weight: 100px;
-            
         }
     }
 }

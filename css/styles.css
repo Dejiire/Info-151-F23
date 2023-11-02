@@ -336,23 +336,30 @@ template {
     Base
 ============= */
 body {
-  padding-top: 50px;
+  padding-top: 10%;
   background-color: var(--off-white);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". main-grid .";
   /* The switch - the box around the slider */
   /* Hide default HTML checkbox */
   /* The slider */
   /* Rounded sliders */
 }
-body #top-heading h1 {
-  padding-left: 445px;
-  padding-right: 445px;
+body main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  text-align: center;
+  grid-area: main-grid;
+}
+body main #top-heading h1 {
   font-size: 2.875rem;
 }
-body #top-heading h2 {
-  margin-top: 30px;
-  padding-left: 550px;
-  padding-right: 550px;
+body main #top-heading h2 {
   font-size: 1.5625rem;
+  margin-top: 20px;
 }
 body .switch {
   position: relative;
@@ -479,15 +486,31 @@ textarea {
 ============= */
 #plans {
   margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-left: 100px;
-  margin-right: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "startup classic premium";
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#plans #start {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: startup;
+}
+#plans #classic {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: classic;
+}
+#plans #premium {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: premium;
 }
 #plans section {
+  margin-bottom: 15%;
   background-color: var(--white);
   color: var(--black);
   padding-bottom: 15px;
@@ -496,6 +519,7 @@ textarea {
   width: 200px;
 }
 #plans section ul li {
+  text-align: left;
   list-style: none;
   margin-top: 20px;
   margin-left: 40px;
@@ -509,22 +533,19 @@ textarea {
   margin-top: -22px;
 }
 #plans section #purple-heading h2 {
-  margin-left: 85px;
+  padding-top: 5%;
   font-size: 1.5625rem;
   font-weight: 100px;
 }
 #plans section #purple-heading h1 {
-  margin-left: 60px;
   font-size: 2.5rem;
   font-weight: 100px;
 }
 #plans section h2 {
-  margin-left: 55px;
   font-size: 1.5625rem;
   font-weight: 100px;
 }
 #plans section h1 {
-  margin-left: 40px;
   font-size: 2.5rem;
   font-weight: 100px;
 }
