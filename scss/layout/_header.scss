@@ -12,6 +12,11 @@ header{
     @include md{
         grid-template-columns: 50% auto 8%;
     }
+
+    @include xl{
+        grid-template-columns: 20% 55% 25%;
+        grid-template-areas: "logo dropdown login";
+    }
     
     #logo-container{
         grid-area: logo;
@@ -24,6 +29,10 @@ header{
         grid-area: menuu;
         justify-content: right;
         align-items: flex-end;
+
+        @include xl{
+            display: none;
+        }
     }
 
     #login{
@@ -36,6 +45,6 @@ header{
         grid-area: dropdown;
         //display: none;
     }
-    
+
     
 }

@@ -2,14 +2,26 @@
     Navigation
 ============= */
 
-nav{
+.showMainNav{
+    display: block !important;
+}
+
+#navv{
     font-size: 18px;
+    display: none;
     ul{
         list-style: none;
         margin-top: 0px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        @include xl{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
         
     
         li{
@@ -22,6 +34,10 @@ nav{
             border-left: none;
             border-right: none;
             border-color: var(--grey);
+
+            @include xl{
+                border: none;
+            }
             
             a{
                 
@@ -29,6 +45,10 @@ nav{
                 text-decoration: none;
                 padding: 5px;
                 display: inline-block;
+            }
+
+            a:hover{
+                color: var(--teal);
             }
             
         }

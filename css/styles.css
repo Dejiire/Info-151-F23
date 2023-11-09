@@ -362,6 +362,11 @@ body {
   margin: 10px 15px;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 /* =============
     Forms
 ============= */
@@ -385,10 +390,15 @@ textarea {
 /* =============
     Navigation
 ============= */
-nav {
-  font-size: 18px;
+.showMainNav {
+  display: block !important;
 }
-nav ul {
+
+#navv {
+  font-size: 18px;
+  display: none;
+}
+#navv ul {
   list-style: none;
   margin-top: 0px;
   display: -webkit-box;
@@ -402,7 +412,24 @@ nav ul {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-nav ul li {
+@media (min-width: 1200px) {
+  #navv ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+#navv ul li {
   padding-top: 10px;
   border-style: solid;
   border-width: 1px;
@@ -411,11 +438,19 @@ nav ul li {
   border-right: none;
   border-color: var(--grey);
 }
-nav ul li a {
+@media (min-width: 1200px) {
+  #navv ul li {
+    border: none;
+  }
+}
+#navv ul li a {
   color: var(--grey-purple);
   text-decoration: none;
   padding: 5px;
   display: inline-block;
+}
+#navv ul li a:hover {
+  color: var(--teal);
 }
 
 /* =============
@@ -433,6 +468,13 @@ header {
   header {
     -ms-grid-columns: 50% auto 8%;
     grid-template-columns: 50% auto 8%;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    -ms-grid-columns: 20% 55% 25%;
+    grid-template-columns: 20% 55% 25%;
+        grid-template-areas: "logo dropdown login";
   }
 }
 header #logo-container {
@@ -458,6 +500,11 @@ header #menu-container {
       -ms-flex-align: end;
           align-items: flex-end;
 }
+@media (min-width: 1200px) {
+  header #menu-container {
+    display: none;
+  }
+}
 header #login {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -474,6 +521,21 @@ header #dropdown {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: dropdown;
+}
+@media (min-width: 1200px) {
+  header #logo-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  header #login {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  header #dropdown {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
 }
 
 /* =============
