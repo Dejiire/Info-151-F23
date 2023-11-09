@@ -1,3 +1,21 @@
 /* =============
     Buttons
 ============= */
+
+.teal-btn{
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 10px 30px;
+    border-radius: 6px;
+    border-width: 0px;
+    margin: 10px 15px;
+}
+
+.white-btn{
+    background-color: var(--white);
+    color: var(--teal);
+    padding: 15px 30px;
+    border-radius: 6px;
+    border-width: 1px;
+    margin: 10px 15px;
+}

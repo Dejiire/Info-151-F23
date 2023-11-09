@@ -1,3 +1,24 @@
 /* =============
     Header
 ============= */
+
+header{
+    display: grid;
+    grid-template-areas: "logo navigation login";
+    justify-content: space-around;
+
+    #logo-container{
+        grid-area: logo;
+    }
+
+    #login{
+        display: flex;
+        grid-area: login;
+    }
+
+    nav{
+        grid-area: navigation;
+    }
+    
+    
+}
