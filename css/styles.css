@@ -425,9 +425,15 @@ header {
   padding-top: 12px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "logo menuu" "dropdown dropdown";
   -ms-grid-columns: 75% 25%;
   grid-template-columns: 75% 25%;
+      grid-template-areas: "logo login menuu" "dropdown dropdown dropdown";
+}
+@media (min-width: 768px) {
+  header {
+    -ms-grid-columns: 50% auto 8%;
+    grid-template-columns: 50% auto 8%;
+  }
 }
 header #logo-container {
   -ms-grid-row: 1;
@@ -442,17 +448,19 @@ header #logo-container {
 }
 header #menu-container {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   padding: 25px;
   grid-area: menuu;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 header #login {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,7 +472,7 @@ header #login {
 header #dropdown {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: dropdown;
 }
 

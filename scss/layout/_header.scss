@@ -5,11 +5,14 @@
 header{
     padding-top: 12px;
     display: grid;
-    grid-template-areas: "logo menuu"
-    "dropdown dropdown";
     grid-template-columns: 75% 25%;
-    
+    grid-template-areas: "logo login menuu"
+    "dropdown dropdown dropdown";
 
+    @include md{
+        grid-template-columns: 50% auto 8%;
+    }
+    
     #logo-container{
         grid-area: logo;
         display: flex;
@@ -19,8 +22,8 @@ header{
     #menu-container{
         padding: 25px;
         grid-area: menuu;
-        justify-content: flex-end;
-        align-items: center;
+        justify-content: right;
+        align-items: flex-end;
     }
 
     #login{
