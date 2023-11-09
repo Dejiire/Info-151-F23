@@ -6,12 +6,14 @@ nav{
     font-size: 18px;
     ul{
         list-style: none;
-        margin: 0px;
+        margin-top: 0px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
+        
+    
         li{
+            
             padding-top: 10px;
             //padding-right: 20px;
             border-style: solid;
@@ -20,9 +22,9 @@ nav{
             border-left: none;
             border-right: none;
             border-color: var(--grey);
-            border
             
             a{
+                
                 color: var(--grey-purple);
                 text-decoration: none;
                 padding: 5px;
