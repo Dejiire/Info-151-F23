@@ -3,21 +3,35 @@
 ============= */
 
 header{
+    padding: 12px 24px;
     display: grid;
-    grid-template-areas: "logo navigation login";
-    justify-content: space-around;
+    grid-template-areas: "logo menuu"
+    "dropdown dropdown";
+    grid-template-columns: 75% 25%;
+    
 
     #logo-container{
         grid-area: logo;
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-container{
+        padding: 25px;
+        grid-area: menuu;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     #login{
         display: flex;
         grid-area: login;
+        justify-content: flex-end;
     }
 
-    nav{
-        grid-area: navigation;
+    #dropdown{
+        grid-area: dropdown;
+        //display: none;
     }
     
     

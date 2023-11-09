@@ -15,6 +15,7 @@ html {
   --white: #ffffff;
   --teal: #024A58;
   --grey-purple: #74768F;
+  --grey: #74768F ;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -389,49 +390,82 @@ nav {
 }
 nav ul {
   list-style: none;
+  margin: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 nav ul li {
   padding-top: 10px;
-  padding-right: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: var(--grey);
 }
 nav ul li a {
   color: var(--grey-purple);
   text-decoration: none;
+  padding: 5px;
+  display: inline-block;
 }
 
 /* =============
     Header
 ============= */
 header {
+  padding: 12px 24px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "logo navigation login";
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+      grid-template-areas: "logo menuu" "dropdown dropdown";
+  -ms-grid-columns: 75% 25%;
+  grid-template-columns: 75% 25%;
 }
 header #logo-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: logo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header #menu-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  padding: 25px;
+  grid-area: menuu;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 header #login {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   grid-area: login;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
-header nav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: navigation;
+header #dropdown {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: dropdown;
 }
 
 /* =============
