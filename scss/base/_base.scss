@@ -5,4 +5,10 @@ body{
     font-family: 'Open Sans';
 }
 
+.show-signUp-container{
+    display: flex !important;
+}
 
+#sign-up-container{
+    display: none;
+}

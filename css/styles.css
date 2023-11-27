@@ -338,6 +338,16 @@ body {
   font-family: "Open Sans";
 }
 
+.show-signUp-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+#sign-up-container {
+  display: none;
+}
+
 /* =============
     Typography
 ============= */
@@ -394,9 +404,24 @@ textarea {
   display: block !important;
 }
 
+.showSignIn {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 #navv {
   font-size: 18px;
   display: none;
+}
+@media (min-width: 1200px) {
+  #navv {
+    display: block;
+    padding-top: 20px;
+  }
 }
 #navv ul {
   list-style: none;
@@ -462,12 +487,13 @@ header {
   display: grid;
   -ms-grid-columns: 75% 25%;
   grid-template-columns: 75% 25%;
-      grid-template-areas: "logo login menuu" "dropdown dropdown dropdown";
+      grid-template-areas: "logo menuu" "dropdown dropdown" "login login";
 }
 @media (min-width: 768px) {
   header {
     -ms-grid-columns: 50% auto 8%;
     grid-template-columns: 50% auto 8%;
+        grid-template-areas: "logo login menuu";
   }
 }
 @media (min-width: 1200px) {
@@ -490,7 +516,7 @@ header #logo-container {
 }
 header #menu-container {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   padding: 25px;
   grid-area: menuu;
   -webkit-box-pack: right;
@@ -506,21 +532,58 @@ header #menu-container {
   }
 }
 header #login {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  display: none;
   grid-area: login;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding: 21px 24px;
+}
+@media (min-width: 768px) {
+  header #login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 24px 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media (min-width: 1200px) {
+  header #login {
+    padding-right: 24px;
+  }
 }
 header #dropdown {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 2;
   grid-area: dropdown;
+}
+@media (min-width: 768px) {
+  header #logo-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  header #menu-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  header #login {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
 }
 @media (min-width: 1200px) {
   header #logo-container {
@@ -530,11 +593,17 @@ header #dropdown {
   header #login {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
   }
   header #dropdown {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header #dropdown {
+    display: block;
   }
 }
 
@@ -543,7 +612,6 @@ header #dropdown {
 ============= */
 #hero {
   background-image: url("../img/hero.jpg");
-  background-size: cover;
-  height: 100vh;
   background-position: center;
+  height: 100vh;
 }

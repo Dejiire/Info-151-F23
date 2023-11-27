@@ -39,9 +39,27 @@
         </section>
         <section id="login">
             <button class="teal-btn">Sign In</button>
-            <button class="white-btn">Sign Up</button>
+            <button class="white-btn" onclick="showModal()">Sign Up</button>
         </section>
     </header>
+    <section id="sign-up-container">
+        <form action="#">
+            <div id="close-button-container">
+                <button class="close-btn" id="close-sign-up-modal-btn"><i class="fa-solid fa-xmark" onclick="closeModal()"></i></button>
+            </div>
+            <input type="text" placeholder="First Name"> 
+            <input type="text" placeholder="Last Name"> 
+            <input type="text" placeholder="Address"> 
+            <input type="text" placeholder="State"> 
+            <input type="text" placeholder="Zip code"> 
+            <input type="text" placeholder="Number"> 
+            <input type="text" placeholder="Email"> 
+            <div id="sign-up-button-container">
+                <button class="white-btn">Sign Up</button>
+            </div>
+            
+        </form>
+    </section>
 
     <section id="hero"></section>
 

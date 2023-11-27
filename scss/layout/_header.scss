@@ -6,11 +6,13 @@ header{
     padding-top: 12px;
     display: grid;
     grid-template-columns: 75% 25%;
-    grid-template-areas: "logo login menuu"
-    "dropdown dropdown dropdown";
+    grid-template-areas: "logo menuu"
+    "dropdown dropdown"
+    "login login";
 
     @include md{
         grid-template-columns: 50% auto 8%;
+        grid-template-areas: "logo login menuu";
     }
 
     @include xl{
@@ -36,14 +38,31 @@ header{
     }
 
     #login{
-        display: flex;
+        display: none;
         grid-area: login;
         justify-content: flex-end;
+        padding: 21px 24px;
+
+        @include md{
+            display: flex;
+            justify-content: flex-end;
+            padding: 24px 0 0;
+            align-items: center;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        @include xl{
+            padding-right: 24px;
+        }
     }
 
     #dropdown{
         grid-area: dropdown;
         //display: none;
+        @media only screen and (min-width: 1024px){
+            display: block;
+          }
     }
 
     

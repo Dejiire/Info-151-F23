@@ -6,9 +6,18 @@
     display: block !important;
 }
 
+.showSignIn{
+    display: flex !important;
+    justify-content: flex-end;
+}
+
 #navv{
     font-size: 18px;
     display: none;
+    @include xl{
+        display: block;
+        padding-top: 20px;
+    }
     ul{
         list-style: none;
         margin-top: 0px;
