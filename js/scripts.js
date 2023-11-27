@@ -36,5 +36,6 @@ function closeModal(){
 function showModal() {
     signUpModule.classList.add("show-signUp-container");
     mainNav.classList.remove("showMainNav");
+    signInContainer.classList.remove("showSignIn");
  }
 
