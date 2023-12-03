@@ -39,3 +39,9 @@ function showModal() {
     signInContainer.classList.remove("showSignIn");
  }
 
+ const element = document.getElementById('hero');
+ function showFullScreen(){
+    if (screenfull.isEnabled) {
+        screenfull.request(element);
+}
+}
